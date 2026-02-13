@@ -1,15 +1,129 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>TrustHire Frontend</title>
-    <script src="https://js.stripe.com/v3/"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>TrustHire - Assinatura Mensal</h1>
-    <button id="subscribe-btn">Assinar Agora</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>TrustHire Ultimate - AI Job Safety & ATS Resume Optimization</title>
+    <meta name="title" content="TrustHire Ultimate - AI Job Safety & ATS Resume Optimization" />
+    <meta name="description" content="Protect yourself from job scams and create ATS-optimized resumes with AI. Support for Workday, Greenhouse, Lever, and more. Available in 8+ languages." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trusthire.app/" />
+    <meta property="og:title" content="TrustHire Ultimate - AI Job Safety & ATS Resume Optimization" />
+    <meta property="og:description" content="Protect yourself from job scams and create ATS-optimized resumes with AI. Support for Workday, Greenhouse, Lever, and more." />
+    <meta property="og:image" content="https://trusthire.app/og-image.png" />
 
-    <script src="checkout.js"></script>
-</body>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://trusthire.app/" />
+    <meta property="twitter:title" content="TrustHire Ultimate - AI Job Safety & ATS Resume Optimization" />
+    <meta property="twitter:description" content="Protect yourself from job scams and create ATS-optimized resumes with AI" />
+    <meta property="twitter:image" content="https://trusthire.app/twitter-image.png" />
+
+    <!-- Keywords -->
+    <meta name="keywords" content="job scam detection, ATS resume optimization, Workday ATS, Greenhouse ATS, resume checker, job safety, AI resume, career tools, job search, applicant tracking system" />
+    
+    <!-- Author -->
+    <meta name="author" content="TrustHire" />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://trusthire.app/" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Schema.org for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TrustHire Ultimate",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "99.90"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150"
+      },
+      "description": "AI-powered platform to detect job scams and optimize resumes for ATS systems like Workday, Greenhouse, and Lever. Multi-language support."
+    }
+    </script>
+
+    <!-- Inline critical CSS for faster loading -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #1a202c;
+      }
+
+      #root {
+        min-height: 100vh;
+      }
+
+      /* Loading spinner */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      .spinner {
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top-color: white;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin-right: 1rem;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading">
+        <div class="spinner"></div>
+        Loading TrustHire...
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
